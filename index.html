@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Markdown Editor by Ashish Agarwal</title>
+      <link rel="stylesheet" type="text/css" href="css/custom.css">
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+   </head>
+   <body>
+    <div class="container">
+        <h1>Markdown Editor</h1>
+        <p>
+            Try writting markdown code in the box below, you will see its output instantly!<br>
+            By default, the output is shown automatically. If a bug or issue prevents it, you can use the Run button to get output. In any unexpected issues, please check your console for detailed info.
+            Made by <a href="//github.com/e-coders" class="link">@e-coders</a> on github
+        </p>
+        <hr>
+        <button class="btn btn-primary" onclick="updateResult();">Run!</button>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-md-6">
+                <textarea id="md" placeholder="Markdown Code" class="editor form-control markdown-body" onchange="updateResult()" oninput="updateResult()"></textarea>
+            </div>
+            <div class="col-md-6">
+                <iframe id="result"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/editor.js"defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js"async></script>
+   </body>
+</html>
